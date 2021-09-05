@@ -95,8 +95,9 @@ void showdata()
     system("cls");
     system("COLOR 0f");
     printf("\t\t<== Student Info ==>\n\n");
-    printf("%-30s %-20s %-10d %s\n" , "NAME", "BRANCH", "ROLLNO", "DATE");
-    fp = fopen("Ademission.txt","rb");
+     printf("\n-----------------------------------------------------------------------------------------\n");
+    printf("%-30s %-20s %-10s %s\n" , "NAME", "BRANCH", "ROLLNO", "DATE");
+    fp = fopen("Admission.txt","rb");
     while(fread(&s,sizeof(s),1,fp)==1)
     {
         printf("\n%-30s %-20s %-10d %s\n" ,s.name,s.branch,s.rollno,s.date);
@@ -163,7 +164,6 @@ void searchbyname()
     fflush(stdin);
     gets(nm);
     printf("%-30s %-20s %-10s %s\n" , "NAME", "BRANCH", "ROLLNO", "DATE");
-    printf("\n------------------------------------------------------------------\n");
     fp = fopen("Admission.txt","rb");
     while(fread(&s,sizeof(s),1,fp)==1)
     {
